@@ -1,9 +1,10 @@
-
+const db = require('./config/mongoose');
 
 const express = require('express');
 const app = express();
 const port = 8000;
 const path = require('path');
+const expressLayouts = require('express-ejs-layouts');
 
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);

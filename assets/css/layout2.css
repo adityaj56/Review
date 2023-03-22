@@ -1,0 +1,14 @@
+.dropdown{
+    margin-left: 900px;
+}
+
+body {
+    background: #8552b8; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #8552b8, #996fc2);
+    background: -moz-linear-gradient(right, #8552b8, #996fc2);
+    background: -o-linear-gradient(right, #8552b8, #996fc2);
+    background: linear-gradient(to left, #8552b8, #996fc2);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+  }
