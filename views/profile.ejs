@@ -1,0 +1,21 @@
+
+
+<link rel="stylesheet" href="/css/profile.css">
+<!-- Below section is for admin page-->
+<div class="card text-center">
+    <div class="card-header">
+      <span><%= user.name %></span>
+      <% if(user.isAdmin) {%> 
+        <span>(Admin)</span>
+        <% } %>
+    </div>
+    <div class="card-body">
+      <div><img src="/images/profile.png" alt="profile"></div>
+      <p class="card-text">Position: <%= user.position %></p>
+      <p class="card-text">Email: <%= user.email %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>

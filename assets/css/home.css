@@ -1,0 +1,21 @@
+.card{
+    width: 90%; 
+    margin: 0 auto; 
+    margin-top: 10px; 
+    background-color: rgba(27, 27, 28, 0.55);
+    color: black;
+}
+
+.btn{
+    background-color: #934caf;
+    border-color: #934caf;
+}
+.btn:hover{
+    background-color: #7843a0;
+    border-color: #7843a0;
+}
+
+img{
+    height: 15%;
+    width: 15%;
+}

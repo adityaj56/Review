@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/home.css">
+
+
+<% for(let userL of users_list) { %> 
+  <% if(userL.email != user.email){%> 
+    <div class="card text-center">
+      <div class="card-header">
+        <span><%= userL.name %></span>
+        <% if(userL.isAdmin == true) { %> 
+          <span>(admin)</span>
+          <% } %>
+      </div>
+      <div class="card-body">
+        <div><img src="/images/profile.png" alt="profile"></div>
+        <p class="card-text">Position: <%= userL.position %></p>
+        <p class="card-text">Email: <%= userL.email %></p>
+        <div>
+          <a href="/admin/assign-admin/?id=<%= userL._id %>">Assign this user as an admin</a>
+        </div>
+        <div>
+          <div><h4>Add an employee for review for this employee</h4></div>
+          <form action="/admin/add-for-review" method="post">
+            <select name="addForReview">
+              <% for(let userA of users_list){ %> 
+                <option value="<%= userA._id %>"><%= userA.name %></option>
+                <% } %>
+            </select>
+            <input type="hidden" name="employee" value="userL._id">
+            <input type="submit" value="add">
+          </form>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+    </div>
+    <% } %>
+  <% } %>
+
+    <!-- Below section is for non-admin users-->
