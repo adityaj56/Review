@@ -36,7 +36,7 @@ module.exports.addForReview = async function(req, res){
             let employee = await User.findById(req.body.employee);
             let employeeToAdd = await User.findById(req.body.addForReview);
             if(employee && employeeToAdd && !employee.reviews.includes(employeeToAdd._id)){
-                employee.reviews.push(employeeToAdd._id);
+                employee.assigned.push(employeeToAdd._id);
                 employee.save();
             }
             else{
@@ -49,3 +49,17 @@ module.exports.addForReview = async function(req, res){
         return res.redirect('back');
     }
 }
+
+// module.exports.review = async function(req, res){
+//     try {
+//         if(req.user.isAdmin){
+//             let employee = await User.findById(req.query.id);
+//             if(employee){
+
+//             }
+//         }
+//         return res.redirect('back');
+//     } catch (error) {
+        
+//     }
+// }

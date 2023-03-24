@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="/css/create_review.css">
+
+
+<div class="card text-center">
+    <form action="/review/create-review" method="post">
+    <div class="card-header">
+    
+        <h4>employee for review</h4>
+        <select name="employee" id="" required>
+            <% for(let employee of employee_list){ %> 
+                <option value="employee._id"><%= employee.name %></option>
+                <% } %>
+        </select>
+    </div>
+    <div class="card-body">
+        
+            
+            <h5>Work Efficiency</h5>
+            <select name="workEfficiency" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <h5>Quality Of Work</h5>
+            <select name="qualityOfWork" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <h5>Team Work</h5>
+            <select name="teamWork" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <h5>Learning Ability</h5>
+            <select name="learningAbility" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <h5>Adherence To Timelines</h5>
+            <select name="adherenceToTimelines" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+    
+    </div>
+    <div class="card-footer text-muted">
+      <input type="submit" value="Add Review">
+    </div>
+</form>
+  </div>
+  
+ 

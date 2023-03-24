@@ -14,9 +14,11 @@
         <div><img src="/images/profile.png" alt="profile"></div>
         <p class="card-text">Position: <%= userL.position %></p>
         <p class="card-text">Email: <%= userL.email %></p>
-        <div>
-          <a href="/admin/assign-admin/?id=<%= userL._id %>">Assign this user as an admin</a>
-        </div>
+        <% if(userL.isAdmin == false) { %> 
+          <div>
+            <a href="/admin/assign-admin/?id=<%= userL._id %>">Assign this user as an admin</a>
+          </div>
+          <% } %>
         <div>
           <div><h4>Add an employee for review for this employee</h4></div>
           <form action="/admin/add-for-review" method="post">
@@ -25,13 +27,13 @@
                 <option value="<%= userA._id %>"><%= userA.name %></option>
                 <% } %>
             </select>
-            <input type="hidden" name="employee" value="userL._id">
+            <input type="hidden" name="employee" value="<%= userL._id %>">
             <input type="submit" value="add">
           </form>
         </div>
       </div>
-      <div class="card-footer text-muted">
-        2 days ago
+      <div class="card-footer">
+        <a href="/admin/review/?id=<%= userL._id %>">See reviews of this employee</a>
       </div>
     </div>
     <% } %>

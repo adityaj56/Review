@@ -14,6 +14,7 @@ router.get('/logout', loginController.logout);
 
 router.use('/admin', require('./admin'));
 router.use('/user', require('./users'));
+router.use('/review', require('./review'));
 
 
 module.exports = router;

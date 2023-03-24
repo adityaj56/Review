@@ -25,4 +25,3 @@ module.exports.profile = function(req, res){
         layout: 'layouts/layout2'
     });
 }
-

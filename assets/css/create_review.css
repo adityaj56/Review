@@ -1,0 +1,39 @@
+.card{
+    width: 90%; 
+    margin: 0 auto; 
+    margin-top: 10px; 
+    background-color: rgba(27, 27, 28, 0.55);
+    color: black;
+}
+
+.btn{
+    background-color: #934caf;
+    border-color: #934caf;
+}
+.btn:hover{
+    background-color: #7843a0;
+    border-color: #7843a0;
+}
+
+img{
+    height: 15%;
+    width: 15%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
