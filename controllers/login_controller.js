@@ -1,3 +1,5 @@
+
+//To render login page
 module.exports.login = function(req, res){
     if(req.isAuthenticated()){
         return res.redirect('user/profile');
@@ -8,6 +10,7 @@ module.exports.login = function(req, res){
     });
 }
 
+//To render signup page
 module.exports.signup = function(req, res){
     if(req.isAuthenticated()){
         return res.redirect('user/profile');
@@ -22,6 +25,7 @@ module.exports.createSession = function(req, res){
     return res.redirect('user/profile');
 }
 
+//For logging out the user
 module.exports.logout = function(req, res){
     req.logout(function(err){
         if(err){

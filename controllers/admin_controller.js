@@ -1,5 +1,6 @@
 const User = require('../models/user');
 
+//To render settings page for admin
 module.exports.settings = async function(req, res){
     try {
         if(req.user.isAdmin){
@@ -18,6 +19,7 @@ module.exports.settings = async function(req, res){
     }
 }
 
+//assign a user admin previlages
 module.exports.assignAdmin = async function(req, res){
     try {
         if(req.user.isAdmin){
@@ -30,6 +32,7 @@ module.exports.assignAdmin = async function(req, res){
     }
 }
 
+//Function to assign a user for review to another user
 module.exports.addForReview = async function(req, res){
     try {
         if(req.user.isAdmin){
@@ -50,6 +53,7 @@ module.exports.addForReview = async function(req, res){
     }
 }
 
+//Function to render the reviews page
 module.exports.review = async function(req, res){
     try {
         if(req.user.isAdmin){

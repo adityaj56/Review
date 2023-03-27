@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const Review = require('../models/review');
 
+//To render the page for creating reviews
 module.exports.page = async function(req, res){
     try {
         let user = await User.findById(req.user.id).populate('assigned');
@@ -15,6 +16,7 @@ module.exports.page = async function(req, res){
     }
 }
 
+//Function to create review
 module.exports.createReview = async function(req, res){
     try {
         let employee = await User.findById(req.body.employee);
