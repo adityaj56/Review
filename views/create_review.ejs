@@ -8,7 +8,7 @@
         <h4>employee for review</h4>
         <select name="employee" id="" required>
             <% for(let employee of employee_list){ %> 
-                <option value="employee._id"><%= employee.name %></option>
+                <option value="<%= employee._id %>"><%= employee.name %></option>
                 <% } %>
         </select>
     </div>

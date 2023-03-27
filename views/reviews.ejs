@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/profile.css">
+
+
+
+<% for(let review of review_list){ %> 
+    <div class="card text-center">
+        <div class="card-header">
+          <h4><%= review.user.name %></h4>
+        </div>
+        <div class="card-body">
+          <h5>Work Efficiency</h5>
+          <p><%=review.workEfficiency %></p>
+          <h5>Quality Of Work</h5>
+          <p><%= review.qualityOfWork %></p>
+          <h5>TeamWork</h5>
+          <p><%= review.teamWork %></p>
+          <h5>Learning Ability</h5>
+          <p><%= review.learningAbility %></p>
+          <h5>Adherence To Timelines</h5>
+          <p><%= review.adherenceToTimelines %></p>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+      </div>
+    <% } %>

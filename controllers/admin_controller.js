@@ -50,16 +50,27 @@ module.exports.addForReview = async function(req, res){
     }
 }
 
-// module.exports.review = async function(req, res){
-//     try {
-//         if(req.user.isAdmin){
-//             let employee = await User.findById(req.query.id);
-//             if(employee){
-
-//             }
-//         }
-//         return res.redirect('back');
-//     } catch (error) {
-        
-//     }
-// }
+module.exports.review = async function(req, res){
+    try {
+        if(req.user.isAdmin){
+            let employee = await User.findById(req.query.id)
+            .populate({
+                path: 'reviews',
+                populate: {
+                    path: 'user'
+                }
+            });
+            if(employee){
+                return res.render('reviews',{
+                    title: employee.name,
+                    layout: 'layouts/layout2',
+                    review_list: employee.reviews
+                })
+            }
+        }
+        return res.redirect('back');
+    } catch (error) {
+        console.log('Error: ', err);
+        return res.redirect('back');
+    }
+}
